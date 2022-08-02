@@ -1,2 +1,2 @@
 
-*.(js|ts|tsx)   @AdiHavivTransmit
+*.tsx  @TransmitSecurity/typescript-reviewrs
