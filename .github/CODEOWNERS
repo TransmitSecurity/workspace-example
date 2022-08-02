@@ -1,2 +1,3 @@
 
 *.tsx  @userid
+*.tsx @TransmitSecurity/typescript-reviewers
