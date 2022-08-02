@@ -1,10 +1,7 @@
 # .github/workflows/version.yml
 name: Git Version
 
-on:
-  push:
-    branches:
-      - master
+on: ['push']
 
 jobs:
   lint:
