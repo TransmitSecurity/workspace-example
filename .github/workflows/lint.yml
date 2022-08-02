@@ -18,8 +18,5 @@ jobs:
       - name: Install Node.js dependencies
         run: npm ci --legacy-peer-deps
 
-      - name: Run linters
-        uses: wearerequired/lint-action@v2
-        with:
-          eslint: true
-          prettier: true
+      - name: Run lint
+        run: npm run lint
