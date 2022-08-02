@@ -1,3 +1,4 @@
 
 ./apps/cart  @TransmitSecurity/userid
 *.tsx @TransmitSecurity/typescript-reviewers
+*.ts @TransmitSecurity/typescript-reviewers
