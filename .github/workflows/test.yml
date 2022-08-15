@@ -1,9 +1,24 @@
-name: 'Test'
-
-on: [push]
+name: 'JFrog CLI Example'
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  Test:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🔎 The name of your branch is ${{ secrets.TEST }} and your repository is ${{ secrets.TEST }}."
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup JFrog CLI
+        uses: jfrog/setup-jfrog-cli@v2
+        env:
+          JF_ENV_1: ${{ secrets.TEST }}
+      - name: Run JFrog CLI
+        run: |
+          # Collect environment variables for the build
+          jf --help
+          # Collect VCS details from git and add them to the build
+          jf rt bag
+          # Publish build info
+          jf rt bp
